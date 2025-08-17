@@ -16,8 +16,8 @@ class HomePageController extends Controller
     {
         return [
             [
-                'title' => 'Systems Engineering & Design',
-                'description' => 'Custom engineered solutions tailored to your specific operational requirements.',
+                'title' => 'ASME Code Vessels',
+        'description' => 'Pressure vessels designed and fabricated to ASME boiler and pressure vessel code standards.',
                 'icon' => 'engineering',
                 'bgColor' => 'bg-white',
                 'titleColor' => 'text-bce-steel',
@@ -27,8 +27,8 @@ class HomePageController extends Controller
                 'iconSize' => 'h-12 w-12'
             ],
             [
-                'title' => 'Custom Manufacturing & Fabrication',
-                'description' => 'High-precision fabrication with ASME-certified quality standards.',
+                'title' => 'Dust Collection Systems',
+        'description' => 'High-efficiency dust collectors for industrial applications with fire/explosion protection.',
                 'icon' => 'box',
                 'bgColor' => 'bg-blue-50',
                 'titleColor' => 'text-blue-800',
@@ -38,8 +38,8 @@ class HomePageController extends Controller
                 'iconSize' => 'h-10 w-10'
             ],
             [
-                'title' => 'Predictive Maintenance & Repairs',
-                'description' => 'Proactive maintenance programs to maximize equipment lifespan.',
+                'title' => 'Coal-Fired Boiler Solutions',
+        'description' => 'Complete pollution control systems for SO₂, NOₓ, and particulate emissions.',
                 'icon' => 'maintenance',
                 'bgColor' => 'bg-white',
                 'titleColor' => 'text-blue-800',
@@ -49,8 +49,8 @@ class HomePageController extends Controller
                 'iconSize' => 'h-10 w-10'
             ],
             [
-                'title' => 'Control Panels & HMI Development',
-                'description' => 'Advanced human-machine interfaces for optimal system control.',
+                'title' => 'Food Processing Air Solutions',
+        'description' => 'Specialized systems for food grade applications with hygienic design.',
                 'icon' => 'control-panel',
                 'bgColor' => 'bg-blue-50',
                 'titleColor' => 'text-blue-800',
@@ -62,3 +62,4 @@ class HomePageController extends Controller
         ];
     }
 }
+

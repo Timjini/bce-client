@@ -64,7 +64,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1720036236694-d0a231c52563?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BCE Engineering Team" class="rounded-lg shadow-xl">
+                    <img src="/images/solutions1.jpeg" alt="BCE Engineering Team" class="rounded-lg shadow-xl">
                 </div>
             </div>
     </x-common.section>
@@ -118,7 +118,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
             
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="BCE Installation" class="w-full h-64 object-cover">
+                    <img src="/images/solutions2.jpeg" alt="BCE Installation" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-bce-steel">Steel Plant Emission Control</h3>
                         <p class="text-gray-600 mb-4">Reduced particulate emissions by 98% while recovering valuable byproducts.</p>
@@ -127,10 +127,10 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://plus.unsplash.com/premium_photo-1682126427232-6be8fe9a91d9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BCE Control Panel" class="w-full h-64 object-cover">
+                    <img src="/images/solutions4.jpg" alt="BCE Control Panel" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">Food Processing Facility Upgrade</h3>
-                        <p class="text-gray-600 mb-4">Custom HMI system improved operational efficiency by 35%.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">Dust Collection and Pollution Control System Engineering</h3>
+                        <p class="text-gray-600 mb-4">The BCE engineering staff is highly experienced and provides a variety of services for a wide range of industries. </p>
                         <a href="#" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                     <a href="#" class="bg-bce-blue hover:bg-bce-light-blue text-white font-bold py-3 px-6 rounded-md inline-block transition duration-300">View Open Positions</a>
                 </div>
                 <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="BCE Team" class="rounded-lg shadow-xl">
+                    <img src="/images/solutions5.jpeg" alt="BCE Team" class="rounded-lg shadow-xl">
                 </div>
             </div>
     </x-common.section>
@@ -170,7 +170,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                             </svg>
                             <div>
                                 <h3 class="font-bold text-lg">Phone</h3>
-                                <p><?php echo PHONE_NUMBER; ?></p>
+                                <p>{{ config('site.phone') }}</p>
                             </div>
                         </div>
                         
