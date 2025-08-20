@@ -23,12 +23,12 @@ class AppLayout extends Component
                     $categoryName  = $page->category->name;
         
                     $megaMenu[$sectionName][$categoryName][] = [
-                        'name' => $page->title,
+                        'name' => $page->name,
                         'slug' => $page->full_slug,
                     ];
                 } else {
                    $megaMenu['Main']['Services'][] = [
-                        'name' => $page->title,
+                        'name' => $page->name,
                         'slug' => $page->full_slug,
                     ];
                 }
