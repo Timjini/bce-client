@@ -6,6 +6,8 @@ use App\Models\Page;
 use App\Models\Section;
 use Illuminate\View\View;
 
+use Illuminate\Http\Request;
+
 class PageController extends Controller
 {
      public function show($sectionSlug, $categorySlug, $pageSlug)
@@ -21,6 +23,7 @@ class PageController extends Controller
 
         return view('pages.show', compact('page'));
     }
+    
     
     public function showCategory($sectionSlug, $categorySlug)
     {
@@ -50,6 +53,18 @@ class PageController extends Controller
                     ->first();
     
         return view('pages.section', compact('section', 'page'));
+    }
+    
+      public function search(Request $request)
+    {
+        $query = $request->input('q');
+
+        $pages = Page::where('title', 'like', "%{$query}%")
+            ->orWhere('name', 'like', "%{$query}%")
+            ->orWhere('slug', 'like', "%{$query}%")
+            ->get();
+
+        return view('pages.search-results', compact('pages', 'query'));
     }
 
     

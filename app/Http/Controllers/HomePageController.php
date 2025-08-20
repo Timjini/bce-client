@@ -2,15 +2,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
+use App\Models\Page;
 
 class HomePageController extends Controller
 {
     public function index(): View
     {
         $iconBoxes = $this->getIconBoxes();
-        $pages = Page::with('category')->get();
+        $pages = Page::with('category.section')->get();
 
-        return view('pages.home', compact('iconBoxes', 'pages'));
+        $megaMenu = [];
+    
+        foreach ($pages as $page) {
+            $sectionName   = $page->category?->section?->name ?? 'Uncategorized';
+            $categoryName  = $page->category?->name ?? 'Other';
+            
+            $megaMenu[$sectionName][$categoryName][] = [
+                'name' => $page->title,
+                'slug' => $page->full_slug, // uses your accessor
+            ];
+        }
+
+        return view('pages.home', compact('iconBoxes', 'megaMenu'));
     }
     
     private function getIconBoxes(): array

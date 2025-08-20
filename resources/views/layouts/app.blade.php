@@ -10,6 +10,10 @@
     <!-- Fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    @livewireStyles
     <script>
         tailwind.config = {
             theme: {
@@ -31,10 +35,39 @@
 
 <body class="">
     @include('layouts.navigation')
+    
+    @if(session('success'))
+    <x-flash type="success"
+        :title="session('success-title', 'Success')"
+        :message="session('success')" />
+    @endif
+
+    @if ($errors->any())
+    <x-flash type="error"
+        title="Validation Error"
+        :message="$errors->all()" />
+    @endif
     <main>
         {{$slot}}
     </main>
     <x-footer></x-footer>
+    
+       
+<script>
+    document.addEventListener('livewire:init', () => {
+        Livewire.on('closeModal', () => {
+            // This will close any modal by resetting the selectedItemId
+            Livewire.emit('resetSelectedItemId');
+        });
+        
+        Livewire.on('costAdded', () => {
+            // Refresh the items table
+            Livewire.emit('refresh');
+        });
+    });
+
+</script>
+ @livewireScripts
 </body>
 
 </html>

@@ -2,11 +2,18 @@
 
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicePagesController;
 use App\Models\Section;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'index']);
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::get('/search', [App\Http\Controllers\PageController::class, 'search'])->name('pages.search');
+
+
 
 Route::prefix('services')->controller(ServicePagesController::class)->group(function () {
     Route::get('/', 'index')->name('services.index');

@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
+use App\Models\Page;
 
 class AppLayout extends Component
 {
@@ -12,6 +13,26 @@ class AppLayout extends Component
      */
     public function render(): View
     {
-        return view('layouts.app');
+         $pages = Page::with('category.section')->get();
+
+            $megaMenu = [];
+
+            foreach ($pages as $page) {
+                if ($page->category && $page->category->section) {
+                    $sectionName   = $page->category->section->name;
+                    $categoryName  = $page->category->name;
+        
+                    $megaMenu[$sectionName][$categoryName][] = [
+                        'name' => $page->title,
+                        'slug' => $page->full_slug,
+                    ];
+                } else {
+                   $megaMenu['Main']['Services'][] = [
+                        'name' => $page->title,
+                        'slug' => $page->full_slug,
+                    ];
+                }
+            }
+        return view('layouts.app', compact('megaMenu'));
     }
 }
