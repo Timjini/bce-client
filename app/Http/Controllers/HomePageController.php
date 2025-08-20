@@ -18,8 +18,8 @@ class HomePageController extends Controller
             $categoryName  = $page->category?->name ?? 'Other';
             
             $megaMenu[$sectionName][$categoryName][] = [
-                'name' => $page->title,
-                'slug' => $page->full_slug, // uses your accessor
+                'name' => $page->name,
+                'slug' => $page->full_slug,
             ];
         }
 

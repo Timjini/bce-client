@@ -17,7 +17,7 @@
             @include('pages.partials.aside', ['pages'=> $page->category->pages])
             
             <main class="lg:w-3/4">
-                <div class="relative w-full h-96 bg-cover bg-center rounded-xl shadow-md bg-[url('{{ $page->image_url ? route('pages.image', basename($page->image_url)) : asset('images/place_holder.png') }}')]"
+                <div class="relative w-full h-96 bg-cover bg-center rounded-xl shadow-md bg-[url('{{ $page->image_url ? route('pages.image', basename($page->image_url)) : asset('images/placeholder.png') }}')]"
                     alt="{{ $page->title }}')">
                     <!-- Dark overlay -->
                     <div class="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
