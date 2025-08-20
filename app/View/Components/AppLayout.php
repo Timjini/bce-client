@@ -26,11 +26,11 @@ class AppLayout extends Component
                         'name' => $page->name,
                         'slug' => $page->full_slug,
                     ];
-                } else {
-                   $megaMenu['Main']['Services'][] = [
-                        'name' => $page->name,
-                        'slug' => $page->full_slug,
-                    ];
+                // } else {
+                //    $megaMenu['Main']['Services'][] = [
+                //         'name' => $page->name,
+                //         'slug' => $page->full_slug,
+                //     ];
                 }
             }
         return view('layouts.app', compact('megaMenu'));
