@@ -66,7 +66,7 @@
             <div class="bg-bce-blue text-white p-6 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-4">Get Started Today</h3>
                 <p class="mb-4">BCE designs, fabricates, installs, and maintains cutting-edge pollution control systems.</p>
-                <a href="#contact" class="inline-block bg-bce-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md text-center transition duration-300">
+                <a href="/contact" class="inline-block bg-bce-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md text-center transition duration-300">
                     Contact Our Team
                 </a>
             </div>
@@ -113,7 +113,7 @@
                         <a href="#" class="bg-bce-accent hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-md text-center transition duration-300">
                             Explore All Solutions
                         </a>
-                        <a href="#contact" class="bg-white hover:bg-gray-100 text-bce-blue font-bold py-3 px-6 rounded-md text-center transition duration-300">
+                        <a href="/contact" class="bg-white hover:bg-gray-100 text-bce-blue font-bold py-3 px-6 rounded-md text-center transition duration-300">
                             Get a Consultation
                         </a>
                     </div>

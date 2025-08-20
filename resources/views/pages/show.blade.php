@@ -1,5 +1,8 @@
 
 <x-app-layout>
+  <img src="{{ route('pages.image', basename($page->image_url)) }}" alt="{{ $page->title }}">
+
+
     @include('pages.partials.header',['pageTitle' => $page->section->name])
      <!-- Breadcrumbs -->
     <x-common.bread-crumbs 

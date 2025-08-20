@@ -8,7 +8,7 @@
     'primaryButtonText' => 'Explore Our Solutions',
     'primaryButtonUrl' => '#solutions',
     'secondaryButtonText' => 'Contact Our Experts',
-    'secondaryButtonUrl' => '#contact',
+    'secondaryButtonUrl' => '/contact',
     'alignment' => 'left',
     'width' => 'md:w-2/3 lg:w-1/2',
     'padding' => 'py-20 md:py-32',

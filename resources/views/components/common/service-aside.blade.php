@@ -40,7 +40,7 @@
             <div class="bg-bce-blue text-white p-6 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-4">Engineering Support</h3>
                 <p class="mb-4">Our boiler engineering experts are available to discuss your specific requirements.</p>
-                <a href="#contact" class="inline-block bg-bce-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md text-center transition duration-300">
+                <a href="/contact" class="inline-block bg-bce-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md text-center transition duration-300">
                     Contact an Engineer
                 </a>
             </div>

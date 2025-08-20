@@ -105,7 +105,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
             </div>
             
             <div class="text-center">
-                <a href="#" class="bg-bce-blue hover:bg-bce-light-blue text-white font-bold py-3 px-8 rounded-md inline-block transition duration-300">View All Capabilities</a>
+                <a href="{{route('pages.section' , ['sectionSlug' => 'engineering-bce-solutions'])}}" class="bg-bce-blue hover:bg-bce-light-blue text-white font-bold py-3 px-8 rounded-md inline-block transition duration-300">View All Capabilities</a>
             </div>
     </x-common.section>
     <!-- BCE in Action Section -->
@@ -119,18 +119,18 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="/images/solutions2.jpeg" alt="BCE Installation" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">Steel Plant Emission Control</h3>
+                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">BCE Manufacturing</h3>
                         <p class="text-gray-600 mb-4">Reduced particulate emissions by 98% while recovering valuable byproducts.</p>
-                        <a href="#" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
+                        <a href="/manufacturing-bce-equipment-bce-manufacturing" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="/images/solutions4.jpg" alt="BCE Control Panel" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">Dust Collection and Pollution Control System Engineering</h3>
+                        <h3 class="text-xl font-semibold mb-2 text-bce-steel">ASME Code Design in Dust Collection and Baghouse Systems</h3>
                         <p class="text-gray-600 mb-4">The BCE engineering staff is highly experienced and provides a variety of services for a wide range of industries. </p>
-                        <a href="#" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
+                        <a href="{{route('pages.show', ['sectionSlug'=> 'engineering-bce-solutions', 'categorySlug'=>'engineering-bce-solutions-equipment', 'pageSlug' => 'engineering-bce-solutions-equipment-asme-code-vessels'])}}" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
                     </div>
                 </div>
             </div>
@@ -142,17 +142,6 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
     </x-common.section>
 
      <!-- Careers Section -->
-    <x-common.section id="career" bgColor="bg-white" textColor="" padding="py-16">
-        <div class="lg:flex items-center gap-12">
-                <div class="lg:w-1/2 mb-8 lg:mb-0">
-                    <h2 class="text-3xl font-bold text-bce-blue mb-4">Build the Future of Clean Industry</h2>
-                    <p class="text-lg text-gray-600 mb-6">At BCE, we're engineers, innovators, and problem-solvers shaping the next era of pollution control and industrial engineering. Join our team and make a measurable impact.</p>
-                    <a href="#" class="bg-bce-blue hover:bg-bce-light-blue text-white font-bold py-3 px-6 rounded-md inline-block transition duration-300">View Open Positions</a>
-                </div>
-                <div class="lg:w-1/2">
-                    <img src="/images/solutions5.jpeg" alt="BCE Team" class="rounded-lg shadow-xl">
-                </div>
-            </div>
-    </x-common.section>
+   
 
 </x-app-layout>

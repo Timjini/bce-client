@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class Page extends Model
 {
     public $incrementing = false;
     protected $keyType = 'string';
-    protected $fillable = ['category_id', 'title', 'slug', 'content', 'full_slug'];
+    protected $fillable = ['name','category_id', 'title', 'slug', 'content', 'full_slug', 'image_url'];
 
     protected static function boot()
     {
@@ -48,4 +49,5 @@ class Page extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
 }
