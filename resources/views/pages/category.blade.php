@@ -22,9 +22,15 @@
                 <div class="h-1 w-20 bg-bce-accent mb-4"></div>
                 <p class="text-lg text-gray-700"></p>
             </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
             {!! $page->content !!}
             
-            @include('pages.partials.action')
+            @include('pages.partials.catergory-links',['catergoryLinks' => $page->category])
+             @include('pages.partials.category-info-bubble')
+        
+            </div>
+            
+             @include('pages.partials.action')
             </main>
         </div>
     

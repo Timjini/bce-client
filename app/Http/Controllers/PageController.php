@@ -10,20 +10,47 @@ class PageController extends Controller
 {
      public function show($sectionSlug, $categorySlug, $pageSlug)
     {
-        // Find section
-        $section = Section::where('slug', $sectionSlug)->firstOrFail();
+        $page = Page::where('slug', $pageSlug)
+        ->whereHas('category', function ($q) use ($categorySlug, $sectionSlug) {
+            $q->where('slug', $categorySlug)
+              ->whereHas('section', function ($q) use ($sectionSlug) {
+                  $q->where('slug', $sectionSlug);
+              });
+        })
+        ->firstOrFail();
 
-        // Find category within that section
+        return view('pages.show', compact('page'));
+    }
+    
+    public function showCategory($sectionSlug, $categorySlug)
+    {
+        $section = Section::where('slug', $sectionSlug)->firstOrFail();
+    
         $category = Category::where('slug', $categorySlug)
             ->where('section_id', $section->id)
             ->firstOrFail();
+    
+        $page = Page::where('category_id', $category->id)
+        ->where('slug', $categorySlug)
+        ->firstOrFail();
 
-        // Find page within that category
-        $page = Page::where('slug', $pageSlug)
-            ->where('category_id', $category->id)
-            ->firstOrFail();
-
-        return view('pages.show', compact('section', 'category', 'page'));
+    
+        return view('pages.category', compact('section', 'category', 'page'));
     }
+    
+    
+    public function showSection($sectionSlug)
+    {
+       
+        $section = Section::where('slug', $sectionSlug)->firstOrFail();
+    
+      
+        $page = Page::where('section_id', $section->id)
+                    ->whereNull('category_id')
+                    ->first();
+    
+        return view('pages.section', compact('section', 'page'));
+    }
+
     
 }

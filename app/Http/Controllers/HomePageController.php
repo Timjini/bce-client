@@ -8,8 +8,9 @@ class HomePageController extends Controller
     public function index(): View
     {
         $iconBoxes = $this->getIconBoxes();
+        $pages = Page::with('category')->get();
 
-        return view('pages.home', compact('iconBoxes'));
+        return view('pages.home', compact('iconBoxes', 'pages'));
     }
     
     private function getIconBoxes(): array

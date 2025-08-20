@@ -14,10 +14,16 @@ Route::prefix('services')->controller(ServicePagesController::class)->group(func
     Route::get('/installation', 'installation')->name('services.installation');
 });
 
-Route::get('/{sectionSlug}', function ($sectionSlug) {
-    $section = Section::where('slug', $sectionSlug)->firstOrFail();
-    return view('pages.service', ['page' => $section->page]);
-})->name('section.page');
+// Route::get('/{sectionSlug}', function ($sectionSlug) {
+//     $section = Section::where('slug', $sectionSlug)->firstOrFail();
+//     return view('pages.service', ['page' => $section->page]);
+// })->name('section.page');
+
+Route::get('{sectionSlug}/{categorySlug}', [PageController::class, 'showCategory'])
+    ->name('pages.category');
 
 Route::get('{sectionSlug}/{categorySlug}/{pageSlug}', [PageController::class, 'show'])
     ->name('pages.show');
+    
+Route::get('{sectionSlug}', [PageController::class, 'showSection'])
+    ->name('pages.section');

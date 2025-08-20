@@ -6,7 +6,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
 ?>
 <x-app-layout>
     <x-hero></x-hero>
-
+    {{var_dump($pages)}}
     <!-- What We Do Section -->
     <x-common.section id="what-we-do" bgColor="bg-gray-50" padding="py-16">
         <div class="text-center mb-12">
