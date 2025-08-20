@@ -117,7 +117,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
             
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="/images/solutions2.jpeg" alt="BCE Installation" class="w-full h-64 object-cover">
+                    <img src="/images/manufacturing_bce.png" alt="BCE Installation" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-bce-steel">BCE Manufacturing</h3>
                         <p class="text-gray-600 mb-4">Reduced particulate emissions by 98% while recovering valuable byproducts.</p>
@@ -135,7 +135,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                 </div>
             </div>
             
-            <div class="text-center">
+            <div class="text-center hidden">
                 <a href="#" class="bg-transparent hover:bg-bce-blue hover:text-white text-bce-blue font-bold py-3 px-6 border-2 border-bce-blue rounded-md inline-block mr-4 transition duration-300">View Case Studies</a>
                 <a href="#" class="bg-bce-blue hover:bg-bce-light-blue text-white font-bold py-3 px-6 rounded-md inline-block transition duration-300">Watch Media Highlights</a>
             </div>

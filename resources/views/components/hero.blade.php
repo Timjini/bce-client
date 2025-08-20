@@ -2,7 +2,7 @@
 @props([
     'backgroundClasses' => 'relative', // Container classes
     'overlayClasses' => 'bg-black/60', // Overlay gradient/color
-    'imageUrl' => '/images/hero.jpeg',
+    'imageUrl' => '/images/engineering_bce.png',
     'title' => 'Engineering Innovation. Building Clean Solutions.',
     'subtitle' => 'From concept to completion, BCE delivers advanced pollution control, systems engineering, and fabrication solutions trusted across the globe.',
     'primaryButtonText' => 'Explore Our Solutions',

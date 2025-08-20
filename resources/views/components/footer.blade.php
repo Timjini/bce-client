@@ -20,11 +20,11 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Engineering</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Manufacturing</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Maintenance</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Parts Store</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Technical Support</a></li>
+                        <li><a href="/engineering-bce-solutions" class="text-gray-300 hover:text-white transition duration-300">Engineering</a></li>
+                        <li><a href="/services/installation" class="text-gray-300 hover:text-white transition duration-300">Manufacturing</a></li>
+                        <li><a href="/services/maintenance" class="text-gray-300 hover:text-white transition duration-300">Maintenance</a></li>
+                        <li><a href="/" class="text-gray-300 hover:text-white transition duration-300">Parts Store</a></li>
+                        <li><a href="/" class="text-gray-300 hover:text-white transition duration-300">Technical Support</a></li>
                     </ul>
                 </div>
                 
