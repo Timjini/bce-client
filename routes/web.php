@@ -4,8 +4,20 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicePagesController;
-use App\Models\Section;
 use Illuminate\Support\Facades\Route;
+
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+
+Route::get('/pages/{filename}', function ($filename): StreamedResponse {
+    $path = "pages/{$filename}";
+
+    if (!Storage::disk('s3')->exists($path)) {
+        abort(404);
+    }
+
+    return Storage::disk('s3')->response($path);
+})->name('pages.image');
 
 Route::get('/', [HomePageController::class, 'index']);
 
