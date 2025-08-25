@@ -55,7 +55,7 @@
 
             <!-- CTA Desktop -->
             <div class="hidden sm:flex sm:items-center">
-                <a href="contact"
+                <a href="/contact"
                    class="bg-bce-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-bce-light-blue transition duration-300">
                     Get a Quote
                 </a>
@@ -106,7 +106,7 @@
         @endforeach
 
         <!-- CTA Mobile -->
-        <a href="contact"
+        <a href="/contact"
            class="block text-center bg-bce-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-bce-light-blue transition duration-300">
             Get a Quote
         </a>

@@ -26,7 +26,7 @@
                     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
                         <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">{{ $page->title }}</h1>
                         <div class="h-1 w-20 bg-bce-accent my-4"></div>
-                        <p class="text-lg">Your subtitle or description here</p>
+                        <p class="text-lg"></p>
                     </div>
                 </div>
 
