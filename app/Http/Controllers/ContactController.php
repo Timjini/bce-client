@@ -9,6 +9,8 @@ use App\Mail\ContactFormMail;
 use App\Mail\ContactThankYouMail;
 use App\Models\Contact;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class ContactController extends Controller
@@ -16,7 +18,6 @@ class ContactController extends Controller
     
         public function show()
     {
-        
         return view('contact.show');
     }
     
@@ -45,11 +46,14 @@ class ContactController extends Controller
         $flashMessage = 'Thank you for your message. We will get back to you shortly.';
     
         try {
+            
             $adminEmail = env('MAIL_FROM_ADDRESS', 'info@devminds.cloud');
             Mail::to($adminEmail)->send(new ContactFormMail($data));
             Mail::to($data['email'])->send(new ContactThankYouMail($data));
+             Storage::prepend('file.log', 'sent!');
         } catch (\Throwable $e) {
             Log::error('Contact form email failed: '.$e->getMessage());
+             Storage::prepend('file.log', $e->getMessage());
             $flashMessage = 'Your message was saved, but the email could not be sent. We will contact you soon.';
         }
     

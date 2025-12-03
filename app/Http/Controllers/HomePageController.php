@@ -8,6 +8,7 @@ class HomePageController extends Controller
 {
     public function index(): View
     {
+        
         $iconBoxes = $this->getIconBoxes();
         $pages = Page::with('category.section')->get();
 

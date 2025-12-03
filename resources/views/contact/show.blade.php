@@ -2,7 +2,7 @@
 // config.php - Basic configuration
 define('SITE_NAME', 'BCE Engineering');
 define('PHONE_NUMBER', '+1 (800) 555-1234');
-define('EMAIL_ADDRESS', 'info@bceengineering.com');
+define('EMAIL_ADDRESS', 'info@bce-usa.com');
 ?>
 <x-app-layout>
 
