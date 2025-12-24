@@ -14,12 +14,24 @@ class ContactInitiated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $data;
+
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
+    }
+
+    /**
+     * Get the data associated with the event.
+     *
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 
     /**

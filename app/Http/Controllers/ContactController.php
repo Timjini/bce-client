@@ -61,6 +61,16 @@ class ContactController extends Controller
     public function submit(SubmitFormRequest $request): RedirectResponse
     {
         $validated = $request->validated();
+
+        Contact::create([
+            'first_name' => $validated['first-name'],
+            'last_name' => $validated['last-name'] ?? null,
+            'email' => $validated['email'],
+            'phone' => $validated['phone'] ?? null,
+            'company' => $validated['company'] ?? null,
+            'message' => $validated['message'],
+        ]);
+    
         
         event(new ContactInitiated($validated));
         // On Success

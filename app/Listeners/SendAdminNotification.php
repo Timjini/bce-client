@@ -20,12 +20,11 @@ class SendAdminNotification
     }
 
     /**
-     * Handle the event.
+     * Handle the event.s
      */
     public function handle(ContactInitiated $event): void
     {
-        info("-----> EVENT ADMIN" . json_encode($event));
-        // $htmlContent = view('emails.contact-thankyou')->with('contactData', $event)->render();
-        // $emailService = $this->emailService->sendEmail($event['email'], $htmlContent);
+        $htmlContent = view('emails.contact-form')->with('contactData', $event->data)->render();
+        $this->emailService->sendEmail(env('ADMIN_EMAIL_RECEIVER'), $htmlContent);
     }
 }
