@@ -121,7 +121,7 @@ define('EMAIL_ADDRESS', 'info@bceengineering.com');
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-bce-steel">BCE Manufacturing</h3>
                         <p class="text-gray-600 mb-4">Reduced particulate emissions by 98% while recovering valuable byproducts.</p>
-                        <a href="/manufacturing-bce-equipment-bce-manufacturing" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
+                        <a href="/engineering-bce-solutions" class="text-bce-blue font-medium hover:underline">Read Case Study →</a>
                     </div>
                 </div>
                 

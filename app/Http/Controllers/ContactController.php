@@ -12,13 +12,14 @@ use App\Mail\ContactThankYouMail;
 use App\Models\Contact;
 use App\Services\PHPCustomMailer;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class ContactController extends Controller
 {
         public function show()
     {
-        
         return view('contact.show');
     }
     

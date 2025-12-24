@@ -3,17 +3,16 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">About BCE</h3>
-                    <p class="text-gray-300">Engineering innovation for a cleaner industrial future since 1985.</p>
+                    <p class="text-gray-300">Engineering innovation for a cleaner industrial future since 2005.</p>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Solutions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Case Studies</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="/" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <!--<li><a href="/about" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>-->
+                        <li><a href="/engineering-bce-solutions" class="text-gray-300 hover:text-white transition duration-300">Solutions</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 
