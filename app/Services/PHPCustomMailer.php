@@ -21,7 +21,7 @@ class PHPCustomMailer
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             // debugging
             // $mail->SMTPDebug = true;
