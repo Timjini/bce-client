@@ -24,7 +24,7 @@ class PHPCustomMailer
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             // debugging
-            $mail->SMTPDebug = true;
+            // $mail->SMTPDebug = true;
             $mail->Host       = env('EMAIL_SMTP');
             $mail->SMTPAuth   = true;
             $mail->Username   = env('ADMIN_EMAIL');
